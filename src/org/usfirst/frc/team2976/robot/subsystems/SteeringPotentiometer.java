@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /**
  *
  */
-public class DefinePotentiometer extends Subsystem  {
+public class SteeringPotentiometer extends Subsystem  {
 	//The rack and pinion wheels move from a left most position to a right most position.
 	//Taking the left most position as zero, the bar moves 2.6 linear inches to get to the right most position
 	double fullRange = 3600;

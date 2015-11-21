@@ -17,6 +17,7 @@ public class OI {
 	 * Joystick(port 3) = logitech joystick on PC usb port 3
 	 * Joystick(port 4) = logitech joystick on PC usb port 4
 	 * */
+	public static double pot; //Needs to be moved, POT is not a OI, OI class is acting as a bridge, yeilds confusing code
 	
 	public static Joystick LeftJoyStick = new Joystick(0);
 	public static Joystick RightJoyStick = new Joystick(1);

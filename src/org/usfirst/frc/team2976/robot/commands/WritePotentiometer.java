@@ -1,30 +1,27 @@
 package org.usfirst.frc.team2976.robot.commands;
 
-import org.usfirst.frc.team2976.robot.subsystems.DefinePotentiometer;
-
+import org.usfirst.frc.team2976.robot.subsystems.SteeringPotentiometer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
  */
-public class ReadPotentiometer extends Command {
-	public static DefinePotentiometer readpotentiometer1 = new DefinePotentiometer();
-	static double position;
+public class WritePotentiometer extends Command {
+	public SteeringPotentiometer steeringpot = new SteeringPotentiometer();
+	double position;
 	
-    public ReadPotentiometer() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
-    	requires(readpotentiometer1);
+    public WritePotentiometer() {
+    	requires(steeringpot);
     }
-
+        
     // Called just before this Command runs the first time
     protected void initialize() {
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	position = readpotentiometer1.m_analog.get();
+    	position = steeringpot.m_analog.get();  
 		SmartDashboard.putNumber("Potentiometer", position);
     }
 

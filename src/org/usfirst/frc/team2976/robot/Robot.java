@@ -12,10 +12,9 @@ import org.usfirst.frc.team2976.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2976.robot.commands.DriveBOT;
 import org.usfirst.frc.team2976.robot.commands.TurnDrive;
 
-//import org.usfirst.frc.team2976.robot.subsystems.DriveTrain;
+
 import org.usfirst.frc.team2976.robot.subsystems.ExampleSubsystem;
-import org.usfirst.frc.team2976.robot.commands.ReadPotentiometer;
-//import org.usfirst.frc.team2976.robot.subsystems.DefinePotentiometer;;
+import org.usfirst.frc.team2976.robot.commands.WritePotentiometer;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -29,11 +28,11 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	
-//	public static final Command TurnDrive = new TurnDrive();
+    public static final Command TurnDrive = new TurnDrive();
     public static final Command DriveBOT = new DriveBOT();
     Command autonomousCommand;
 
-    public static final Command ReadPotentiometer = new ReadPotentiometer();
+    //public static final Command DisplayPotentiometer = new WritePotentiometer();
     Command potentiometer;
     
     /**
@@ -73,8 +72,8 @@ public class Robot extends IterativeRobot {
         if (autonomousCommand != null) autonomousCommand.cancel();
         
         DriveBOT.start();
-        ReadPotentiometer.start();
-//        TurnDrive.start();
+        //DisplayPotentiometer.start();
+        TurnDrive.start();
     }
 
     /**
@@ -91,7 +90,7 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
     }
-    
+    	
     /**
      * This function is called periodically during test mode
      */

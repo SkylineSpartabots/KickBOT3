@@ -21,10 +21,11 @@ public class RobotMap {
     public static final int
     	//RobotDrive(int frontLeftMotor, int rearLeftMotor, int frontRightMotor, int rearRightMotor)
     		analogPotentiometerPort = 1, //Analog Port
+    		digitalCenterSwitchPort = 2, // Digital Port 
              frontLeftMotor 	= 4, //PWM 4
              rearLeftMotor 		= 2, //PWM 2
              frontRightMotor 	= 3, //PWM 3
-             rearRightMotor 	= 1, //PWM 1
-    		snowBlowerMotor 	= 0; //PWM 0
+             rearRightMotor 	= 0, //PWM 1
+    		snowBlowerMotor 	= 1; //PWM 0
     		 
  }
