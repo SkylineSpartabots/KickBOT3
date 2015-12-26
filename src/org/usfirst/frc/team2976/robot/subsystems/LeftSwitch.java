@@ -12,7 +12,7 @@ public class LeftSwitch extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	public DigitalInput m_centerSwitch = new DigitalInput(RobotMap.digitalCenterSwitchPort);
+	public DigitalInput m_leftSwitch = new DigitalInput(RobotMap.digitalLeftSwitchPort);
 	
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

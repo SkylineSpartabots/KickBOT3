@@ -32,7 +32,6 @@ public class DrivePlus extends RobotDrive {
 	public void setTurnWheelSpeed(double a){
 		A = a;	
 	}
-	4
 	@Override
 	 public void tankDrive(GenericHID leftStick, GenericHID rightStick) {
 	        if (leftStick == null || rightStick == null) {
@@ -40,13 +39,15 @@ public class DrivePlus extends RobotDrive {
 	        }
 	        double x;
 	        double y;
+	        
 	        //TODO Determine if wheel speed correction should be proportional to Y as well as X
-        /* 	y = leftStick.getY() - A*(OI.LeftJoyStick.getX());
-         *	x = rightStick.getY() + A*(OI.LeftJoyStick.getX());
-         */
+     
+	        y = leftStick.getY() - A*(OI.LeftJoyStick.getX());
+         	x = rightStick.getY() + A*(OI.LeftJoyStick.getX());
+         /*
 	    	y = leftStick.getY() - A*(OI.LeftJoyStick.getX())*OI.LeftJoyStick.getY();
             x = rightStick.getY() + A*(OI.LeftJoyStick.getX())*OI.LeftJoyStick.getY();
-            
+           */ 
 	        super.tankDrive(y, x, true);        
 	}
 

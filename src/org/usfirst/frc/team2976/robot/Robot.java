@@ -1,5 +1,3 @@
-
-
 package org.usfirst.frc.team2976.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -11,7 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team2976.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2976.robot.commands.DriveBOT;
 import org.usfirst.frc.team2976.robot.commands.TurnDrive;
-
+import org.usfirst.frc.team2976.robot.commands.scoringCommand;
 
 import org.usfirst.frc.team2976.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team2976.robot.commands.WritePotentiometer;
@@ -30,6 +28,7 @@ public class Robot extends IterativeRobot {
 	
     public static final Command TurnDrive = new TurnDrive();
     public static final Command DriveBOT = new DriveBOT();
+    public static final Command  scoringCommand = new scoringCommand();
     Command autonomousCommand;
 
     //public static final Command DisplayPotentiometer = new WritePotentiometer();
@@ -74,6 +73,12 @@ public class Robot extends IterativeRobot {
         DriveBOT.start();
         //DisplayPotentiometer.start();
         TurnDrive.start();
+        scoringCommand.start();
+        /*
+         * To change power look at the if (action) {
+         * } 
+         * block in the command scoringCommand
+         */
     }
 
     /**
